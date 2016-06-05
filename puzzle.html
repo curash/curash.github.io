@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	
+	function checkAnswers(tagName, answer){
+		
+		userAnswer = document.getElementById(tagName).value;
+		if(userAnswer.toLowerCase() == answer)
+			return true;
+		else
+			return false;
+	}
+
+	function cheackAnswers(){
+
+		var goodAnswer = 0;
+		if(checkAnswers('puzzle1', 'лавровый лист'))
+			goodAnswer++;
+		if(checkAnswers('puzzle2', 'дорога'))
+			goodAnswer++;
+		if(checkAnswers('puzzle3', '6'))
+			goodAnswer++;
+		if(checkAnswers('puzzle4', 'пух'))
+			goodAnswer++;
+
+
+		if(goodAnswer == 0)
+			alert('Вы ничего не угадали');
+		else
+			alert('Количество правильных ответов: ' + goodAnswer);		
+
+	}
+
+
+</script>
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guess-2.html">Угадайка мультиплеер</a></li>			
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Игра в загадки</h2>
+	</div>
+	<div id="content">
+
+	<h3>Отгадай загадки!</h3>  
+
+
+	<p> Что сырым не едят, а как сварят, то выбрасывают? <p/>
+	<input type="text" id="puzzle1" />
+
+	<p> Что идет из города в город, но при этом не движется? <p/>
+	<input type="text" id="puzzle2" />
+
+	<p> Какое число станет больше, если его поставить вверх ногами? <p/>
+	<input type="text" id="puzzle3" />
+
+	<p> Что с земли поднять легко, но трудно кинуть далеко? <p/>
+	<input type="text" id="puzzle4" />
+
+	</br></br></br>
+	<input type="button" value="Ответить" onClick="cheackAnswers()" />
+
+		
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>

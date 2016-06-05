@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	
+		function randomInteger(min, max){
+			var rand = min - 0.5 + Math.random() * (max + 1 - min);
+			rand = Math.round(rand);
+			return rand;
+		}
+		
+		randomAnswer = randomInteger(1,100);
+function StartPlay(){
+					
+		user1 = prompt('Игрок №1, введите свое имя');
+		user2 = prompt('Игрок №2, введите свое имя');
+		
+		while(true)
+		{
+			var user1Answer = prompt(user1 + ', введите число от 1 до 100');
+				if(user1Answer == randomAnswer)	{
+					alert('Вы угадали!');
+					break;
+				} 
+				if (user1Answer < 1 || user1Answer > 100) {
+					do {
+						user1Answer = prompt('Ну я же просила, введите число от 1 до 100');
+					}
+					while(user1Answer < 1 || user1Answer > 100)
+				}
+				if (user1Answer < randomAnswer) {
+					alert('Ваше число слишком маленькое');
+				} 
+				if (user1Answer > randomAnswer) {
+					alert('Ваше число слишком большое');
+				}
+			var user2Answer = prompt(user2 + ', введите число от 1 до 100');
+				if(user2Answer == randomAnswer){
+					alert('Вы угадали!');
+					break;
+				} 
+				if (user2Answer < 1 || user2Answer > 100) {
+					do {
+						user1Answer = prompt('Ну я же просила, введите число от 1 до 100');
+					}
+					while(user1Answer < 1 || user1Answer > 100)
+				}
+				if (user2Answer < randomAnswer) {
+					alert('Ваше число слишком маленькое');
+				} 
+				if (user2Answer > randomAnswer) {
+					alert('Ваше число слишком большое');
+				}
+			}
+		if(user1Answer == randomAnswer){
+			alert('Поздравляю, ' + user1 + ', Вы победили!');	
+		}
+		if(user2Answer == randomAnswer){
+			alert('Поздравляю, ' + user2 + ', Вы победили!');
+		}
+		}
+	</script>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guess-2.html">Угадайка мультиплеер</a></li>			
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Игра в угадайку мультиплеер</h2>
+	</div>
+	<div id="content">
+<p> Эта игра рассчитана на два игрока. Я загадала число от 1 до 100, предлагаю Вам его отгадать. После каждого введенного числа я буду давать подсказку, больше ли Ваше число или меньше того, что я загадала.</p>
+
+<input type="button" value="Начать игру" onclick="StartPlay()" />
+		
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>
